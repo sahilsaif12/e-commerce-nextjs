@@ -22,8 +22,6 @@ function ModeBtn() {
     };
 
     useEffect(() => {
-        console.log(dark);
-        
         document.body.classList.add("dark");
     }, [])
     
