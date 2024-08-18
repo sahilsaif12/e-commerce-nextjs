@@ -13,7 +13,7 @@ function Card({data}) {
         <div>
             <div class="p-4 mx-auto bg-gray-100 md:my-4 my-2 border-2 dark:border-gray-600 dark:bg-gray-800 rounded-lg shadow-lg flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 max-w-sm md:max-w-2xl">
                 <div class="shrink-0  ">
-                    <img class="h-36 w-36 rounded-xl border-4 dark:border-gray-600   hover:shadow-2xl " src={image} alt={title} />
+                    <Image class="h-36 w-36 rounded-xl border-4 dark:border-gray-600   hover:shadow-2xl " src={image} width={200} height={100} alt={title} />
                 </div>
 
                 <div class="flex-1 text-center md:text-left">

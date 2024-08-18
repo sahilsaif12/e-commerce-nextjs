@@ -15,6 +15,7 @@ function CartBtn() {
     useEffect(() => {
         document.body.classList.add("dark");
     }, [])
+    
     useEffect(() => {
         if (cart.length!=id) {
             setid(cart.length)

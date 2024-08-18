@@ -21,7 +21,7 @@ function CartItems() {
         :
 
         <div className="dark:text-gray-400 text-gray-700 md:p-3">
-            You don't have any item on cart , browse on our <Link href={'/'} className="text-purple-400 cursor-pointer  border-b-2 border-dotted border-purple-400 ">Products</Link> and add your choices on the cart
+            You dont have any item on cart , browse on our <Link href={'/'} className="text-purple-400 cursor-pointer  border-b-2 border-dotted border-purple-400 ">Products</Link> and add your choices on the cart
         </div>
     }
     </div>

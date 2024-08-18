@@ -35,7 +35,7 @@ function Billing() {
         <div class="border-t border-gray-200 dark:border-gray-700 mt-2">
         {
             cart.map((item) =>{
-                return <div class="flex  justify-between mt-2 text-gray-800 dark:text-gray-300">
+                return <div key={item.id} class="flex  justify-between mt-2 text-gray-800 dark:text-gray-300">
                 <p className='line-clamp-1 w-2/3' >{item.title}</p>
                 {item.quantity>1 && <div className='text-blue-300' >x {item.quantity} </div>}
                 <p>$ {item.price * item.quantity}</p>
