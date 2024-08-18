@@ -12,16 +12,13 @@ function CartBtn() {
   const dark = useSelector((state) => state.theme.darkMode)
   const dispatch = useDispatch()
 
-    useEffect(() => {
-        document.body.classList.add("dark");
-    }, [])
     
     useEffect(() => {
         if (cart.length!=id) {
             setid(cart.length)
             
         }
-    }, [cart])
+    }, [cart,id])
 
     
     
@@ -39,6 +36,7 @@ function CartBtn() {
                     className='w- animate-fade-right  saturate-200  animate-once animate-duration-[800ms]  animate-ease-in-out' 
                     width={26} 
                     height={26} 
+                    alt='cart button'
                 />
     </div>
     </Link>

@@ -43,7 +43,7 @@ function CategoryList({categories}) {
                             md:justify-between 
                             md:pt-0"
                         >
-                            <li> <Link href={`/`}    onClick={() =>setcurrCategory('all')} class={`${currCategory=='all' && 'text-purple-600 dark:text-purple-500 '} md:p-4 py-2 capitalize block dark:text-gray-400 text-gray-600 hover:text-purple-600 dark:hover:text-purple-400`}
+                            <li key={323}> <Link href={`/`}    onClick={() =>setcurrCategory('all')} class={`${currCategory=='all' && 'text-purple-600 dark:text-purple-500 '} md:p-4 py-2 capitalize block dark:text-gray-400 text-gray-600 hover:text-purple-600 dark:hover:text-purple-400`}
                             >All products</Link>
                             </li>
                             {
