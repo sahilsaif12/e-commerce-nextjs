@@ -32,7 +32,7 @@ function Checkout() {
             </div>
             <div class="flex justify-between font-semibold text-gray-900 dark:text-gray-200 mt-2">
                 <span>Final amount</span>
-                <span>$ {finalAmount}</span>
+                <span>$ {finalAmount.toFixed(2)}</span>
             </div>
         </div>
 
