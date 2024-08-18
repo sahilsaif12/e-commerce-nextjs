@@ -1,18 +1,29 @@
 'use client';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux'
+import { toggle } from '@/features/themeSlice';
 
 function ModeBtn() {
-    const [dark, setdark] = useState(true);
+    
+  const dark = useSelector((state) => state.theme.darkMode)
+  const dispatch = useDispatch()
+
+    // const [dark, setdark] = useState(true);
     const [animateKey, setAnimateKey] = useState(0); 
 
     const handleClick = () => {
-        setdark(!dark);
+        // setdark(!dark);
+        dispatch(toggle())
         setAnimateKey(prevKey => prevKey + 1); 
+
         document.body.classList.toggle("dark");
 
     };
+
     useEffect(() => {
+        console.log(dark);
+        
         document.body.classList.add("dark");
     }, [])
     

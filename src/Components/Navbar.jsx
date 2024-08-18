@@ -3,6 +3,7 @@ import React, { Suspense } from 'react'
 import ModeBtn from './ModeBtn'
 import Link from 'next/link'
 import CategoryList from './CategoryList';
+import CartBtn from './CartBtn';
 async function Navbar() {
     const response = await fetch(`${process.env.API_URL}/products/categories`);
     if (!response.ok) {
@@ -12,7 +13,7 @@ async function Navbar() {
     const categories = await response.json();
 
     return (
-        <div className="dark:bg-gray-900 bg-gray-200 " >
+        <div className="dark:bg-gray-900 sticky top-0 z-10 bg-gray-200 " >
 
             <div className="flex items-center p-2 px-4 justify-between">
                 <div className="flex flex-col md:flex-row md:justify-between items-center  md:w-2/3">
@@ -24,9 +25,11 @@ async function Navbar() {
                     </Suspense>
                 </div>
                 {/* <Image src='/menu.svg' className='invert' width={20} height={20} /> */}
+                <div className='flex items-center gap-4'>
 
-
+                <CartBtn/>
                 <ModeBtn />
+                </div>
             </div>
         </div>
     )

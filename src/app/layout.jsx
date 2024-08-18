@@ -2,6 +2,11 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
+import { Provider } from 'react-redux'
+import store from "./store";
+import StoreProvider from "./StoreProvider";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +24,27 @@ export default function RootLayout({ children }) {
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Lobster+Two&display=swap" rel="stylesheet"/>
     </head>
       <body className={inter.className}>
+      <StoreProvider>
       <Navbar/>
       {children}
       <Footer/>
+      <ToastContainer
+position="bottom-right"
+autoClose={3000}
+icon={false}
+hideProgressBar={false}
+newestOnTop
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover={false}
+theme="dark"
+// transition= "Bounce"
+/>
+      </StoreProvider>
+
+
       </body>
     </html>
   );
