@@ -48,7 +48,7 @@ function CategoryList({categories}) {
                             </li>
                             {
                                 categories.map((category,i) => {
-                                    return <li> <Link key={i}  href={`/category/${category}`} onClick={() =>setcurrCategory(category)} class={`${currCategory===category && 'text-purple-600 dark:text-purple-500 '} md:p-4 py-2 capitalize block dark:text-gray-400 text-gray-600 hover:text-purple-600 dark:hover:text-purple-400`}
+                                    return <li key={i}> <Link   href={`/category/${category}`} onClick={() =>setcurrCategory(category)} class={`${currCategory===category && 'text-purple-600 dark:text-purple-500 '} md:p-4 py-2 capitalize block dark:text-gray-400 text-gray-600 hover:text-purple-600 dark:hover:text-purple-400`}
                                     >{category}</Link>
                                     </li>
                                 })
