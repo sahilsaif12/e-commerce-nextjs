@@ -7,7 +7,6 @@ import store from "./store";
 import StoreProvider from "./StoreProvider";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import Navbar2 from "@/Components/Navbar2";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,7 +26,6 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
       <StoreProvider>
       <Navbar/>
-      {/* <Navbar2/> */}
       {children}
       <Footer/>
       <ToastContainer
