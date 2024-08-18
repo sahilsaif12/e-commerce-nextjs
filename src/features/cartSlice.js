@@ -4,7 +4,8 @@ export const cartSlice = createSlice({
     name: 'cart',
     initialState: {
         cartItems: [],
-        totalAmount:0
+        totalAmount:0,
+        finalAmount:0
     },
     reducers: {
         addItem: (state, action) => {
@@ -34,11 +35,21 @@ export const cartSlice = createSlice({
             state.totalAmount-=(existingItem.price * existingItem.quantity )
         },
 
+        clearCart: (state) => {
+            state.cartItems = [];
+            state.totalAmount=0;
+        },
 
+        setFinalAmount: (state,action) => {
+            state.finalAmount=action.payload
+        },
+        abc: (state,action) => {
+            return action.payload
+        }
     },
 })
 
 // Action creators are generated for each case reducer function
-export const { addItem, removeItem,fullRemove } = cartSlice.actions
+export const { addItem, removeItem,fullRemove ,clearCart,setFinalAmount,abc} = cartSlice.actions
 
 export default cartSlice.reducer

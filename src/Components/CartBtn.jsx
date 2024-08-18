@@ -28,16 +28,31 @@ function CartBtn() {
     
                 <sup key={id} className='absolute right-0 top- font-bold dark:bg-gray-950 bg-gray-300   py-2 p-1 rounded-full dark:text-teal-100   text-gray-800 
                 animate-fade  saturate-200  animate-once animate-duration-[800ms]  animate-ease-in-out
-                '>{cart.length}</sup>
+                '>{cart?.length}</sup>
+                {dark?
+                
     <Image
                     // key={`sun-${animateKey}`} // Unique key to force re-render
-                    src={`/${dark? "cart":"cart-light"}.png `}
+                    src={`/cart.png`}
                     key={id}
                     className='w- animate-fade-right  saturate-200  animate-once animate-duration-[800ms]  animate-ease-in-out' 
                     width={26} 
                     height={26} 
                     alt='cart button'
                 />
+                :
+    <Image
+                    // key={`sun-${animateKey}`} // Unique key to force re-render
+                    src={`/cart-light.png`}
+                    key={id}
+                    className='w- animate-fade-right  saturate-200  animate-once animate-duration-[800ms]  animate-ease-in-out' 
+                    width={26} 
+                    height={26} 
+                    alt='cart button'
+                />
+
+
+                }
     </div>
     </Link>
   )
