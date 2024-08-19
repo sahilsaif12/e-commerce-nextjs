@@ -3,6 +3,7 @@ Live- https://e-commerce-sk-saifuddin.vercel.app
 First, run the development server:
 
 ```bash
+npm i
 npm run dev
 
 ```
