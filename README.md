@@ -1,4 +1,4 @@
-Live- https://e-commerce-sk-saifuddin.vercel.app/checkout
+Live- https://e-commerce-sk-saifuddin.vercel.app
 
 First, run the development server:
 
